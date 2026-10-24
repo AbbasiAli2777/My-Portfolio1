@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+@font-face {
+    font-family: sora-sb;
+    src: url(../../../assets/fonts/soraes/Sora-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: sora-r;
+    src: url(../../../assets/fonts/soraes/Sora-Regular.ttf);
+}
+
+div.login {
+    width: 476px;
+    height: 572px;
+    margin: 80px auto;
+
+    > div.logo {
+        text-align: center;
+        width: 476px;
+        height: 90px;
+
+            > img {
+            width: 168px;
+            height: 40px;
+            object-fit: cover;
+            }
+        }
+
+    > div.main {
+        background-color: white;
+        width: 100%;
+        height: 482px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        > div.top > h4 {
+            font-family: sora-sb;
+            font-size: 32px;
+            color: rgb(51, 51, 51);
+            margin-bottom: 15px;
+        }
+
+        > div.top > p {
+            color: #8f8f8f;
+            font-size: 16px;
+            font-family: sora-r;
+        }
+        > form {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            >div.inp-box{
+                position: relative;
+                
+                > input {
+                font-size: 16px;
+                font-family: sora-r;
+                padding: 12px 16px 12px 45px;
+                border: 1px solid #d5d5d5;
+                } 
+                
+                > input::placeholder {
+                    color: #b9b9b9;
+                }
+                
+                >img{
+                    position: absolute;
+                    left: 18px;
+                    top: 18px;
+                }
+            }
+            div.inp-box:nth-of-type(1){
+                margin-bottom: 25px;
+            }
+
+            >div.inp-box:nth-of-type(2)>img{
+                margin-top: -2px;
+            }
+
+            > label {
+                font-size: 12px;
+                font-family: sora-r;
+                display: block;
+                margin-bottom: 3px;
+            }
+
+            >img{
+                width: 16px;
+            }
+        }
+
+        > button {
+            padding: 11px 27px;
+            color: white;
+            background-color: #3281ca;
+            border: none;
+            box-shadow: 5px 5px 10px lightgray;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+        >div.bottom {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            > span {
+                color: #8f8f8f;
+            }
+
+            > a {
+                text-decoration: none;
+                margin-left: 5px;
+                color: #3281ca;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    div.login {
+        width: 100%;
+        max-width: 476px;
+        height: auto;
+        margin: 16px auto;
+    }
+
+    div.login > div.logo {
+        width: 100%;
+        height: auto;
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.login > div.logo > img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    div.login > div.main {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 28px 22px;
+        gap: 18px;
+        justify-content: flex-start;
+    }
+
+    div.login > div.main > div.top > h4 {
+        font-size: 28px;
+    }
+
+    div.login > div.main > div.top > p {
+        line-height: 1.5;
+    }
+
+    div.login > div.main > form {
+        width: 100%;
+        gap: 0;
+    }
+
+    div.login > div.main > form > div.inp-box {
+        width: 100%;
+    }
+
+    div.login > div.main > form > div.inp-box > input {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    div.login > div.main > form > div.inp-box > div.war,
+    div.login > div.main > form > div.inp-box > div.error {
+        max-width: 42%;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    div.login > div.main > div.bottom {
+        flex-wrap: wrap;
+        gap: 4px;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 10px 8px;
+    }
+
+    div.login > div.main {
+        padding: 24px 16px;
+    }
+
+    div.login > div.main > div.top > h4 {
+        font-size: 25px;
+    }
+
+    div.login > div.main > form > div.inp-box > input {
+        padding-left: 38px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    div.login > div.main > form > div.inp-box > img {
+        left: 12px;
+    }
+}
+
+    @media (max-width: 540px) {
+    div.login {
+        width: calc(100% - 32px); max-width: 476px; height: auto; margin: 24px auto; 
+    }
+    div.login > div.logo { width: 100%; height: auto; min-height: 70px; 
+    }
+    div.login > div.main { width: 100%; height: auto; min-height: 0; padding: 28px 22px; gap: 22px; 
+    }
+    div.login > div.main > div.top > h4 { font-size: 26px; 
+    }
+    div.login > div.main > form { gap: 16px; 
+    }
+    div.login > div.main > form > div.inp-box { width: 100%; 
+    }
+    div.login > div.main > form > div.inp-box > input { width: 100%; max-width: 100%; 
+    }
+    div.login > div.main > form > button, div.login > div.main > form > input[type="submit"] { max-width: 100%; 
+    }
+    div.login img { max-width: 100%; 
+    }
+    
+}
+    @media (max-width: 360px) {
+    div.login { width: calc(100% - 20px); margin: 10px auto; 
+    }
+    div.login > div.main { padding: 22px 16px; 
+    }
+    div.login > div.main > div.top > h4 { font-size: 23px; 
+    }
+    
+}
